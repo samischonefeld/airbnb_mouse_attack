@@ -60,10 +60,24 @@ function hideMouse8() {
 
 var gameInit = document.getElementById('gameInit');
 var gameBoard = document.getElementById('gameBoard1');
+var end = document.getElementById('end');
+
+//This is first attempt at figuring out how to end the game on a timer
+function hideGameboard() {
+  function hideGameboard(){gameBoard.style.display = 'none'};
+  function showEnd(){end.style.display = 'block'};
+
+  hideGameboard();
+  showEnd();
+};
+
+// function timeOut(){setTimeout(hideGameboard(), 4500)};
+
 function showGameboard(){
    function showStuff(){instructions.classList.toggle("show")};
    function initGameboard(){gameBoard.style.display = 'block'};
-//launch timer function here
+
+
 
    showStuff();
    initGameboard();
@@ -75,8 +89,43 @@ function showGameboard(){
    hideMouse6();
    hideMouse7();
    hideMouse8();
+setTimeout(function () {
+
+})
+
 }
 
 gameInit.addEventListener('click', showGameboard);
+
+
+// function timeOut(){setTimeout(hideGameboard(), 4500)};
+// timeOut();
+
+var mice = document.getElementsByClassName('mice')
+var clickCount = 0
+
+//attempting to render polaroid image behind mouse onclick/
+function photoTaken(){
+// mice.classList.add('snap');
+// setTimeout(function () {mice.classList.remove('snap'), 1000});
+clickCount++;
+console.log(clickCount);
+console.log("this is kind of working too")
+return clickCount
+  }
+
+mouse1.addEventListener('click', photoTaken);
+mouse2.addEventListener('click', photoTaken);
+mouse3.addEventListener('click', photoTaken);
+mouse4.addEventListener('click', photoTaken);
+mouse5.addEventListener('click', photoTaken);
+mouse6.addEventListener('click', photoTaken);
+mouse7.addEventListener('click', photoTaken);
+mouse8.addEventListener('click', photoTaken);
+
+
+
+
+
 
 

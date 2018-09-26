@@ -97,7 +97,13 @@ h1 {
 .hidden {
   opacity: 0;
 }
+#end {
+  display: none;
+}
 
+.mice.snap {
+  background-image: url(/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/polaroid.jpg)
+}
 /*#mouse1.hidden {
  opacity: 0;
 }
