@@ -1,0 +1,144 @@
+* {
+  font-family: 'Arimo', sans-serif;
+}
+header {
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  background-color: white;
+}
+h1 {
+  color: red;
+  margin: 0px;
+  font-family: 'Creepster', cursive;
+}
+#preview.remove{
+  display: none;
+}
+
+#instructions {
+  display: none;
+}
+#instructions.show {
+  display: inline;
+}
+
+#gameboard1.show {
+  display: inline;
+}
+
+#counter {
+  display: block;
+  border: 1px solid black;
+}
+#timer {
+  display: block;
+  border: 1px solid black;
+}
+/*GAME BOARD CSS HERE*/
+
+#gameBoard1 {
+  background-image: url(/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 800px;
+  display: none;
+}
+/*#gameboard1.show {
+  display: inline;
+}*/
+
+.mice {
+  max-height: 150px;
+  max-width: 150px;
+  border: 1px solid black;
+}
+#mouse1 {
+  position: relative;
+  left: 1200px;
+  top: 70px;
+}
+#mouse2 {
+  position: relative;
+  left: 600px;
+  bottom: 50px;
+}
+#mouse3 {
+  position: relative;
+  left: 800px;
+
+}
+#mouse4 {
+  position: relative;
+  left: 350px;
+}
+#mouse5 {
+  position: relative;
+  left: 650px;
+}
+#mouse6{
+  position: relative;
+  left: 200px;
+}
+#mouse7 {
+  position: relative;
+  left: 1000px;
+}
+#mouse8 {
+  position: relative;
+  left: 300px;
+  bottom: 20px ;
+}
+/*.hideMouse {
+  display: none;
+}*/
+
+.hidden {
+  opacity: 0;
+}
+
+/*#mouse1.hidden {
+ opacity: 0;
+}
+
+#mouse2.hidden {
+  opacity: 0;
+}
+
+#mouse3.hidden {
+  opacity: 0;
+}
+
+#mouse4.hidden {
+  opacity: 0;
+}
+
+#mouse5.hidden{
+  opacity: 0;
+}
+
+#mouse6.hidden{
+  opacity: 0;
+}
+
+#mouse7.hidden{
+  opacity: 0;
+}
+
+#mouse8.hidden{
+  opacity: 0;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
