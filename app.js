@@ -104,13 +104,20 @@ gameInit.addEventListener('click', showGameboard);
 var mice = document.getElementsByClassName('mice')
 var clickCount = 0
 
+
+
 //attempting to render polaroid image behind mouse onclick/
-function photoTaken(){
 // mice.classList.add('snap');
 // setTimeout(function () {mice.classList.remove('snap'), 1000});
+
+var counter = document.getElementById('counter');
+
+function photoTaken(){
+
 clickCount++;
 console.log(clickCount);
 console.log("this is kind of working too")
+counter.innerHTML = clickCount;
 return clickCount
   }
 
@@ -123,9 +130,7 @@ mouse6.addEventListener('click', photoTaken);
 mouse7.addEventListener('click', photoTaken);
 mouse8.addEventListener('click', photoTaken);
 
-
-
-
+//creating live click counter : https://codepen.io/juliogcampos/pen/BzdjwY
 
 
 
