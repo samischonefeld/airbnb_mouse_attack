@@ -122,58 +122,50 @@ mouse6.addEventListener('click', photoTaken);
 mouse7.addEventListener('click', photoTaken);
 mouse8.addEventListener('click', photoTaken);
 
-//CREATING LIVE TIMER -https://www.youtube.com/watch?v=u_6CqjQ-L8Q
+
+// END GAME FUNCTION & WIN LOGIC
+var winLose = document.getElementById("winLose");
+function endGame(){
+  alert('game should end here');
+  console.log('game over');
+  function hideGameboard(){gameBoard.style.display = 'none'};
+  function showEnd(){
+    end.style.display = 'inline'
+    if(clickCount <= 10){
+      winLose.textContent = `You only took ${clickCount} pictures! Airbnb declined your request for a refund. You lose!`
+    } else if (clickCount >= 11){
+      winLose.textContent = `You took ${clickCount} pictures. Congratulations Airbnb has refunded you stay!`
+    }
+    };
+  hideGameboard();
+  showEnd();
+
+  }
+
+//CREATING LIVE TIMER -https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown
 function timeOut() {
-    var timeleft = 30;
+    var timeleft = 10;
     var timer = setInterval(function(){
     timeleft--;
-  if(timeleft <= 0)
+    document.getElementById('timer').textContent = timeleft;
+  if(timeleft <= 0){
         clearInterval(timer);
-        console.log(timeleft);
-        //update text in timer
-        //end game function here
+        // console.log(timeleft);
         document.getElementById('timer').textContent = timeleft;
+        endGame();
+}
     },1000);
 }
-// var secs = 45
-// function countDown(secs, elem) {
-//   var timer = document.getElementById('timer');
-//   timer.innerHTML = "secs"
-//   if(secs < 1) {
-//     clearTimeout(timerCount);
-//     timer.innerHTML = "No more time left"}
-//   secs--;
-//   var timerCount = setTimeout('countDown('+secs+',"'+elem+'")', 1000);
-//   }
 
+console.log(end);
 
+//  RESTART GAME
 
-// mice.classList.add('snap');
-// setTimeout(function () {mice.classList.remove('snap'), 1000});
+function restartGame() {
+  window.location.reload();
+}
 
-//This is first attempt at figuring out how to end the game on a timer
-// function hideGameboard() {
-//   function hideGameboard(){gameBoard.style.display = 'none'};
-//   function showEnd(){end.style.display = 'block'};
-
-//   hideGameboard();
-//   showEnd();
-// };
-
-// function timeOut(){setTimeout(hideGameboard(), 4500)};
-// timeOut();
-
-//NEW TIMER
-// var clock = setInterval(myTimer, 1000);
-
-// function myTimer(){
-//   for(let t = 45; t > 0; t-=1)
-//   console.log(t);
-//   document.getElementById('timer').innerHTML = 't'
-// }
-
-// myTimer();
-// WIN LOGIC
-
+var restart = document.getElementById('refresh');
+restart.addEventListener('click', restartGame);
 
 
