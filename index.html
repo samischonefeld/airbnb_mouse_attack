@@ -12,17 +12,33 @@
 <header>
 <div id="counter"></div>
 <h1>AirBnB Mouse Attack!</h1>
-<div id="timer">30</div>
+<div id="timer"></div>
 </header>
 
 
 <body>
 <!-- Game Init -->
-<div id = "pregame">
+
 <div id = "preview">
-  <h2 id = "congrats">Congratulations on booking your airbnb!<br> Are you ready for your trip?</h2>
-  <button id = "bookButton">Let's Go!</button>
+  <h2>Select your Airbnb</h2>
+  <div id = "cards">
+  <div class = "card" id = "card1">
+    <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb1_small.jpg" alt="airbnb2">
+    <p>Charming studio in Queens</p>
+    <p>$120/night</p>
+  </div>
+  <div class = "card" id = "card2">
+    <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb2_small.jpg" alt="airbnb2">
+    <p>Cozy studio in LES</p>
+    <p>$125/night</p>
+  </div>
 </div>
+<div id = "congratsSection">
+  <h2 id = "congrats">Congratulations on booking your airbnb!<br> Are you ready for your trip?</h2>
+  <button id = "bookButton" class = "button">Let's Go!</button>
+</div>
+</div>
+
 
 
 
@@ -30,14 +46,16 @@
   <h2 id = "instructions2">Despite your hope of having a pleasant stay,
     shortly after you arrive you realize the Airbnb you've booked has a mouse infestation!<br>
   The only way to get your money back is to take pictures of the mice to send to airbnb before you chekout!</h2>
-<button id="gameInit">Picture Day</button>
-</div>
+<button id="gameInit" class = "button">Picture Day</button>
 </div>
 
+
   <!-- GAME BOARD -->
+
+
 <div id = gameBoard1>
   <div class = "mice" id = "mouse1">
-    <img id = "mouse1" src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse1.png" alt="mouse">
+    <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse1.png" alt="mouse">
   </div>
   <div class = "mice" id = "mouse2">
     <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse2.png" alt="mouse">
@@ -64,7 +82,9 @@
 <!-- Win/Lose Page -->
 <div id = "end">
   <h2 id = "winLose"></h2>
-  <button id = "refresh"> Book Again </button>
+  <button id = "refresh" class = "button"> Book Again </button>
+  <div id ="runContainer">
+    <img  id="runMouse" src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/runningmouse_gif.gif" alt="run">
 </div>
 
 <script type="text/javascript" src="app.js"></script>

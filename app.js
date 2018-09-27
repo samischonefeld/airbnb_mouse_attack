@@ -1,6 +1,7 @@
 
 // Game Intro
-
+var airbnb1 = document.getElementById('card1');
+var airbnb2 = document.getElementById('card2');
 var button = document.getElementById('bookButton');
 var preview = document.getElementById('preview');
 var instructions = document.getElementById('instructions');
@@ -14,6 +15,22 @@ function showInstructions(){
   }
 
 button.addEventListener('click', showInstructions);
+
+
+//CHange background on game board
+function airbnb1click() {
+gameBoard1.style.background = 'no-repeat center url(/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb1.jpg)';
+card1.style.border = '4px solid #337885';
+console.log('this works');
+}
+
+airbnb1.addEventListener('click', airbnb1click);
+function airbnb2click() {
+  gameBoard1.style.background = 'no-repeat center url(/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb2.jpg)';
+  card2.style.border = '4px solid #337885';
+  console.log('this works too');
+}
+airbnb2.addEventListener('click', airbnb2click);
 
 // Setting up Mouse Toggle on Init
 
@@ -109,7 +126,7 @@ function photoTaken(){
 clickCount++;
 console.log(clickCount);
 console.log("this is kind of working too")
-counter.innerHTML = clickCount;
+counter.innerHTML = clickCount + ' photos taken';
 return clickCount
   }
 
@@ -147,11 +164,11 @@ function timeOut() {
     var timeleft = 10;
     var timer = setInterval(function(){
     timeleft--;
-    document.getElementById('timer').textContent = timeleft;
+    document.getElementById('timer').textContent = timeleft + ' seconds left';
   if(timeleft <= 0){
         clearInterval(timer);
         // console.log(timeleft);
-        document.getElementById('timer').textContent = timeleft;
+        // document.getElementById('timer').textContent = timeleft;
         endGame();
 }
     },1000);
