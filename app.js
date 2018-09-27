@@ -62,16 +62,16 @@ var gameInit = document.getElementById('gameInit');
 var gameBoard = document.getElementById('gameBoard1');
 var end = document.getElementById('end');
 
-//This is first attempt at figuring out how to end the game on a timer
-function hideGameboard() {
-  function hideGameboard(){gameBoard.style.display = 'none'};
-  function showEnd(){end.style.display = 'block'};
+// //This is first attempt at figuring out how to end the game on a timer
+// function hideGameboard() {
+//   function hideGameboard(){gameBoard.style.display = 'none'};
+//   function showEnd(){end.style.display = 'block'};
 
-  hideGameboard();
-  showEnd();
-};
+//   hideGameboard();
+//   showEnd();
+// };
 
-// function timeOut(){setTimeout(hideGameboard(), 4500)};
+// // function timeOut(){setTimeout(hideGameboard(), 4500)};
 
 function showGameboard(){
    function showStuff(){instructions.classList.toggle("show")};
@@ -89,31 +89,23 @@ function showGameboard(){
    hideMouse6();
    hideMouse7();
    hideMouse8();
-setTimeout(function () {
+   timeOut();
 
-})
-
-}
+};
 
 gameInit.addEventListener('click', showGameboard);
 
 
-// function timeOut(){setTimeout(hideGameboard(), 4500)};
-// timeOut();
 
 var mice = document.getElementsByClassName('mice')
 var clickCount = 0
 
 
-
-//attempting to render polaroid image behind mouse onclick/
-// mice.classList.add('snap');
-// setTimeout(function () {mice.classList.remove('snap'), 1000});
-
+//CLICK COUNT
 var counter = document.getElementById('counter');
 
 function photoTaken(){
-
+//creating live click counter : https://codepen.io/juliogcampos/pen/BzdjwY
 clickCount++;
 console.log(clickCount);
 console.log("this is kind of working too")
@@ -130,7 +122,58 @@ mouse6.addEventListener('click', photoTaken);
 mouse7.addEventListener('click', photoTaken);
 mouse8.addEventListener('click', photoTaken);
 
-//creating live click counter : https://codepen.io/juliogcampos/pen/BzdjwY
+//CREATING LIVE TIMER -https://www.youtube.com/watch?v=u_6CqjQ-L8Q
+function timeOut() {
+    var timeleft = 30;
+    var timer = setInterval(function(){
+    timeleft--;
+  if(timeleft <= 0)
+        clearInterval(timer);
+        console.log(timeleft);
+        //update text in timer
+        //end game function here
+        document.getElementById('timer').textContent = timeleft;
+    },1000);
+}
+// var secs = 45
+// function countDown(secs, elem) {
+//   var timer = document.getElementById('timer');
+//   timer.innerHTML = "secs"
+//   if(secs < 1) {
+//     clearTimeout(timerCount);
+//     timer.innerHTML = "No more time left"}
+//   secs--;
+//   var timerCount = setTimeout('countDown('+secs+',"'+elem+'")', 1000);
+//   }
+
+
+
+// mice.classList.add('snap');
+// setTimeout(function () {mice.classList.remove('snap'), 1000});
+
+//This is first attempt at figuring out how to end the game on a timer
+// function hideGameboard() {
+//   function hideGameboard(){gameBoard.style.display = 'none'};
+//   function showEnd(){end.style.display = 'block'};
+
+//   hideGameboard();
+//   showEnd();
+// };
+
+// function timeOut(){setTimeout(hideGameboard(), 4500)};
+// timeOut();
+
+//NEW TIMER
+// var clock = setInterval(myTimer, 1000);
+
+// function myTimer(){
+//   for(let t = 45; t > 0; t-=1)
+//   console.log(t);
+//   document.getElementById('timer').innerHTML = 't'
+// }
+
+// myTimer();
+// WIN LOGIC
 
 
 
