@@ -126,7 +126,7 @@ mouse8.addEventListener('click', photoTaken);
 // END GAME FUNCTION & WIN LOGIC
 var winLose = document.getElementById("winLose");
 function endGame(){
-  alert('game should end here');
+  alert('Stay is over, send your pictures to Airbnb!');
   console.log('game over');
   function hideGameboard(){gameBoard.style.display = 'none'};
   function showEnd(){
@@ -159,7 +159,7 @@ function timeOut() {
 
 console.log(end);
 
-//  RESTART GAME
+//  RESTART GAME - https://stackoverflow.com/questions/3715047/how-to-reload-a-page-using-javascript
 
 function restartGame() {
   window.location.reload();
