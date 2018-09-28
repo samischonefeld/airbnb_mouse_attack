@@ -1,6 +1,7 @@
 * {
   font-family: 'Arimo', sans-serif;
   color: darkslategray;
+
 }
 header {
   border-bottom: 1px solid gray;
@@ -56,7 +57,8 @@ p {
   font-size: 30px;
   background-color: #ed6664;
   color: white;
-  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 #instructions {
   display: none;
@@ -64,6 +66,11 @@ p {
 #instructions.show {
   display: inline;
   width: 80%;
+}
+#instructions2 {
+  padding-top: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 #gameboard1.show {
@@ -143,16 +150,20 @@ p {
  opacity: 0;
  pointer-events: none;
 }
-
+#winLose {
+  padding-top: 100px;
+}
 #end {
   display: none;
   align-content: center;
+  padding-top: 100px;
 }
 
 #runMouse {
-  animation: change-rate 5s linear infinite alternate;
+  animation: change-rate 5s linear infinite;
   position: absolute;
-  align-self: right;
+  padding-top: 100px;
+
 }
 @keyframes change-rate {
   0% {

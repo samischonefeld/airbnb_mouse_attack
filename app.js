@@ -79,16 +79,6 @@ var gameInit = document.getElementById('gameInit');
 var gameBoard = document.getElementById('gameBoard1');
 var end = document.getElementById('end');
 
-// //This is first attempt at figuring out how to end the game on a timer
-// function hideGameboard() {
-//   function hideGameboard(){gameBoard.style.display = 'none'};
-//   function showEnd(){end.style.display = 'block'};
-
-//   hideGameboard();
-//   showEnd();
-// };
-
-// // function timeOut(){setTimeout(hideGameboard(), 4500)};
 
 function showGameboard(){
    function showStuff(){instructions.classList.toggle("show")};
@@ -108,14 +98,22 @@ function showGameboard(){
 
 };
 
+var ohBoy = document.getElementById('ohBoy');
+function ohBoy(){
+  ohBoy.play();
+}
 gameInit.addEventListener('click', showGameboard);
+gameInit.addEventListener('click', ohBoy);
+
 
 
 
 var mice = document.getElementsByClassName('mice')
 var clickCount = 0
 
-
+// click SOund
+var cameraClick = document.getElementById('playClick');
+function playClick(){cameraClick.play();}
 //CLICK COUNT
 var counter = document.getElementById('counter');
 
@@ -137,6 +135,14 @@ mouse6.addEventListener('click', photoTaken);
 mouse7.addEventListener('click', photoTaken);
 mouse8.addEventListener('click', photoTaken);
 
+mouse1.addEventListener('click', playClick);
+mouse2.addEventListener('click', playClick);
+mouse3.addEventListener('click', playClick);
+mouse4.addEventListener('click', playClick);
+mouse5.addEventListener('click', playClick);
+mouse6.addEventListener('click', playClick);
+mouse7.addEventListener('click', playClick);
+mouse8.addEventListener('click', playClick);
 
 // END GAME FUNCTION & WIN LOGIC
 var winLose = document.getElementById("winLose");
@@ -147,9 +153,9 @@ function endGame(){
   function showEnd(){
     end.style.display = 'inline'
     if(clickCount <= 10){
-      winLose.textContent = `You only took ${clickCount} pictures! Airbnb declined your request for a refund. You lose!`
+      winLose.textContent = `You only took ${clickCount} pictures!\nAirbnb declined your request for a refund. You lose!`
     } else if (clickCount >= 11){
-      winLose.textContent = `You took ${clickCount} pictures. Congratulations Airbnb has refunded you stay!`
+      winLose.textContent = `You took ${clickCount} pictures.\n Congratulations Airbnb has refunded you stay. You win!`
     }
     };
   hideGameboard();
@@ -182,5 +188,6 @@ function restartGame() {
 
 var restart = document.getElementById('refresh');
 restart.addEventListener('click', restartGame);
+
 
 
