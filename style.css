@@ -1,7 +1,6 @@
 * {
-  font-family: 'Arimo', sans-serif;
+  font-family: "Arimo", sans-serif;
   color: darkslategray;
-
 }
 header {
   border-bottom: 1px solid gray;
@@ -12,7 +11,7 @@ header {
 h1 {
   color: #ed6664;
   margin: 0px;
-  font-family: 'Creepster', cursive;
+  font-family: "Creepster", cursive;
   font-size: 40px;
   padding-top: 5px;
 }
@@ -34,7 +33,7 @@ p {
   justify-content: center;
   width: 80%;
 }
-#preview.remove{
+#preview.remove {
   display: none;
 }
 #cards {
@@ -88,7 +87,7 @@ p {
   color: #337885;
 }
 #timer {
-   display: flex;
+  display: flex;
   height: 50px;
   width: 150px;
   justify-content: center;
@@ -123,7 +122,6 @@ p {
 #mouse3 {
   position: relative;
   left: 800px;
-
 }
 #mouse4 {
   position: relative;
@@ -133,7 +131,7 @@ p {
   position: relative;
   left: 650px;
 }
-#mouse6{
+#mouse6 {
   position: relative;
   left: 200px;
 }
@@ -145,12 +143,12 @@ p {
 #mouse8 {
   position: relative;
   left: 320px;
-  bottom: 65px ;
+  bottom: 65px;
 }
 
 .hidden {
- opacity: 0;
- pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
 }
 #winLose {
   padding-top: 100px;
@@ -177,6 +175,7 @@ p {
     right: 100%;
   }
 }
+
 /*MEDIA QUERIES - https://css-tricks.com/snippets/css/media-queries-for-standard-devices/*/
 
 /*@media all
