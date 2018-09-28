@@ -50,11 +50,11 @@ function hideMouse3(){
 
 var mouse4 = document.getElementById('mouse4');
 function hideMouse4(){
-  setInterval(function(){mouse4.classList.toggle("hidden")}, 4000)
+  setInterval(function(){mouse4.classList.toggle("hidden")}, 2500)
 }
 var mouse5 = document.getElementById('mouse5');
 function hideMouse5(){
-  setInterval(function(){mouse5.classList.toggle("hidden")}, 5000);
+  setInterval(function(){mouse5.classList.toggle("hidden")}, 3500);
 
 }
 
@@ -70,7 +70,7 @@ function hideMouse7() {
 
 var mouse8 = document.getElementById('mouse8');
 function hideMouse8() {
-  setInterval(function(){mouse8.classList.toggle("hidden")}, 500);
+  setInterval(function(){mouse8.classList.toggle("hidden")}, 2500);
 }
 
 // Game Init
@@ -93,8 +93,6 @@ var end = document.getElementById('end');
 function showGameboard(){
    function showStuff(){instructions.classList.toggle("show")};
    function initGameboard(){gameBoard.style.display = 'block'};
-
-
 
    showStuff();
    initGameboard();
