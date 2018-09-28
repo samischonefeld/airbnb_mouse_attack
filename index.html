@@ -1,92 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Arimo');
-  </style>
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Creepster');
-  </style>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <style>@import url('https://fonts.googleapis.com/css?family=Arimo');</style>
+    <style>@import url('https://fonts.googleapis.com/css?family=Creepster');</style>
   <title>Document</title>
 </head>
 
 <header>
-  <div id="counter"></div>
-  <h1>AirBnB Mouse Attack!</h1>
-  <div id="timer"></div>
+<div id="counter"></div>
+<h1>AirBnB Mouse Attack!</h1>
+<div id="timer"></div>
 </header>
 
-<body>
-  <!-- PREVIEW PAGE -->
-  <div id="preview">
-    <h2>Select your Airbnb</h2>
-    <div id="cards">
-      <div class="card" id="card1">
-        <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb1_small.jpg" alt="airbnb2">
-        <p>Charming studio in Queens</p>
-        <p>$120/night</p>
-      </div>
-      <div class="card" id="card2">
-        <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb2_small.jpg" alt="airbnb2">
-        <p>Cozy studio in LES</p>
-        <p>$125/night</p>
-      </div>
-    </div>
-    <div id="congratsSection">
-      <h2 id="congrats">Congratulations on booking your stay!<br> Are you ready for your trip?</h2>
-      <button id="bookButton" class="button">Let's Go!</button>
-    </div>
-  </div>
 
-  <!-- INSTRUCTIONS PAGE -->
-  <div id="instructions">
-    <h2 id="instructions2">Despite your hope of having a pleasant stay, <br> shortly after you arrive you realize the place you've booked is infested with mice!<br><br> The only way to get your money back is to take enough pictures of the mice and send them to Airbnb before
-      you chekout!</h2>
-    <button id="gameInit" class="button">Picture Day</button>
+<body>
+<!-- PREVIEW PAGE -->
+<div id = "preview">
+  <h2>Select your Airbnb</h2>
+  <div id = "cards">
+  <div class = "card" id = "card1">
+    <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb1_small.jpg" alt="airbnb2">
+    <p>Charming studio in Queens</p>
+    <p>$120/night</p>
   </div>
+  <div class = "card" id = "card2">
+    <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb2_small.jpg" alt="airbnb2">
+    <p>Cozy studio in LES</p>
+    <p>$125/night</p>
+  </div>
+</div>
+<div id = "congratsSection">
+  <h2 id = "congrats">Congratulations on booking your stay!<br> Are you ready for your trip?</h2>
+  <button id = "bookButton" class = "button">Let's Go!</button>
+</div>
+</div>
+
+<!-- INSTRUCTIONS PAGE -->
+<div id = "instructions">
+  <h2 id = "instructions2">Despite your hope of having a pleasant stay, <br> shortly after you arrive you realize the place you've booked is infested with mice!<br><br>
+  The only way to get your money back is to take enough pictures of the mice and send them to Airbnb before you chekout!</h2>
+<button id="gameInit" class = "button">Picture Day</button>
+</div>
+
 
   <!-- GAME BOARD -->
-  <div id=g ameBoard1>
-    <audio id="playClick" src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/camera2.mp3"></audio>
-    <div class="mice" id="mouse1">
-      <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse1.png" alt="mouse">
-    </div>
-    <div class="mice" id="mouse2">
-      <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse2.png" alt="mouse">
-    </div>
-    <div class="mice" id="mouse3">
-      <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse3.png" alt="mouse">
-    </div>
-    <div class="mice" id="mouse4">
-      <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse4.png" alt="mouse">
-    </div>
-    <div class="mice" id="mouse5">
-      <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse5.png" alt="mouse">
-    </div>
-    <div class="mice" id="mouse6">
-      <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse6.png" alt="mouse">
-    </div>
-    <div class="mice" id="mouse7">
-      <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse7.png" alt="mouse">
-    </div>
-    <div class="mice" id="mouse8">
-      <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse8.png" alt="mouse">
-    </div>
+<div id = gameBoard1>
+  <audio id="playClick" src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/camera2.mp3"></audio>
+  <div class = "mice" id = "mouse1">
+    <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse1.png" alt="mouse">
   </div>
+  <div class = "mice" id = "mouse2">
+    <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse2.png" alt="mouse">
+  </div>
+  <div class = "mice" id = "mouse3">
+    <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse3.png" alt="mouse">
+  </div>
+  <div class = "mice" id = "mouse4" >
+  <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse4.png" alt="mouse">
+</div>
+<div class = "mice" id = "mouse5">
+    <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse5.png" alt="mouse">
+</div>
+<div class = "mice" id = "mouse6">
+    <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse6.png" alt="mouse">
+</div>
+<div class = "mice" id = "mouse7">
+    <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse7.png" alt="mouse">
+</div>
+<div class = "mice" id = "mouse8">
+    <img src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/mouse8.png" alt="mouse">
+</div>
+</div>
 
-  <!-- WIN/LOSE PAGE -->
-  <div id="end">
-    <h2 id="winLose"></h2>
-    <button id="refresh" class="button"> Book Again </button>
-    <audio id="ohBoy" src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/ohboy.mp3"></audio>
-    <div id="runContainer">
-      <img id="runMouse" src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/runningmouse_2.gif" alt="run">
-    </div>
+<!-- WIN/LOSE PAGE -->
+<div id = "end">
+  <h2 id = "winLose"></h2>
+  <button id = "refresh" class = "button"> Book Again </button>
+  <audio id = "ohBoy" src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/ohboy.mp3"></audio>
+  <div id ="runContainer">
+    <img  id="runMouse" src="/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/runningmouse_2.gif" alt="run">
+</div>
 
-    <script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="app.js"></script>
 </body>
-
 </html>
