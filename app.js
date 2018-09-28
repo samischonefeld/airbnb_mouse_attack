@@ -1,14 +1,15 @@
 
-// Game Intro
+// UNIVERSAL FUNCTIONS
 var airbnb1 = document.getElementById('card1');
 var airbnb2 = document.getElementById('card2');
 var button = document.getElementById('bookButton');
 var preview = document.getElementById('preview');
 var instructions = document.getElementById('instructions');
+
+//SHOWING INSTRUCTIONS
 function showInstructions(){
   function hidePreview(){preview.classList.toggle("remove")};
   function showStuff(){instructions.classList.toggle("show")};
-  console.log('is this working');
 
   hidePreview();
   showStuff();
@@ -16,23 +17,20 @@ function showInstructions(){
 
 button.addEventListener('click', showInstructions);
 
-
-//CHange background on game board
+//CHANGING BOARDGAME BACKGROUND
 function airbnb1click() {
 gameBoard1.style.background = 'no-repeat center url(/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb1.jpg)';
 card1.style.border = '4px solid #337885';
-console.log('this works');
 }
 
 airbnb1.addEventListener('click', airbnb1click);
 function airbnb2click() {
   gameBoard1.style.background = 'no-repeat center url(/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb2.jpg)';
   card2.style.border = '4px solid #337885';
-  console.log('this works too');
 }
 airbnb2.addEventListener('click', airbnb2click);
 
-// Setting up Mouse Toggle on Init
+// TOGGLINE MICE ON GAME INIT
 
 var mouse1 = document.getElementById('mouse1');
 function hideMouse1(){
@@ -73,7 +71,7 @@ function hideMouse8() {
   setInterval(function(){mouse8.classList.toggle("hidden")}, 2500);
 }
 
-// Game Init
+// GAME INIT
 
 var gameInit = document.getElementById('gameInit');
 var gameBoard = document.getElementById('gameBoard1');
@@ -105,23 +103,16 @@ function ohBoy(){
 gameInit.addEventListener('click', showGameboard);
 gameInit.addEventListener('click', ohBoy);
 
-
-
-
-var mice = document.getElementsByClassName('mice')
-var clickCount = 0
-
-// click SOund
+// CAMERA CLICK SOUND - https://stackoverflow.com/questions/29567580/play-a-beep-sound-on-button-click
 var cameraClick = document.getElementById('playClick');
 function playClick(){cameraClick.play();}
-//CLICK COUNT
+
+//CLICK COUNT https://codepen.io/juliogcampos/pen/BzdjwY
+var clickCount = 0
 var counter = document.getElementById('counter');
 
 function photoTaken(){
-//creating live click counter : https://codepen.io/juliogcampos/pen/BzdjwY
 clickCount++;
-console.log(clickCount);
-console.log("this is kind of working too")
 counter.innerHTML = clickCount + ' photos taken';
 return clickCount
   }
@@ -148,7 +139,6 @@ mouse8.addEventListener('click', playClick);
 var winLose = document.getElementById("winLose");
 function endGame(){
   alert('Stay is over, send your pictures to Airbnb!');
-  console.log('game over');
   function hideGameboard(){gameBoard.style.display = 'none'};
   function showEnd(){
     end.style.display = 'inline'
@@ -171,14 +161,11 @@ function timeOut() {
     document.getElementById('timer').textContent = timeleft + ' seconds left';
   if(timeleft <= 0){
         clearInterval(timer);
-        // console.log(timeleft);
-        // document.getElementById('timer').textContent = timeleft;
         endGame();
 }
     },1000);
 }
 
-console.log(end);
 
 //  RESTART GAME - https://stackoverflow.com/questions/3715047/how-to-reload-a-page-using-javascript
 

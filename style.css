@@ -17,7 +17,7 @@ h1 {
   padding-top: 5px;
 }
 h2 {
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
   padding-bottom: 20px;
 }
@@ -27,7 +27,7 @@ p {
   left: 60px;
 }
 #preview {
-  padding-top: 100px;
+  padding-top: 20px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -40,6 +40,7 @@ p {
 #cards {
   display: flex;
   justify-content: space-around;
+  font-size: 15px;
 }
 #card1 {
   border: 2px solid lightgray;
@@ -139,11 +140,12 @@ p {
 #mouse7 {
   position: relative;
   left: 1000px;
+  bottom: 30px;
 }
 #mouse8 {
   position: relative;
-  left: 300px;
-  bottom: 20px ;
+  left: 320px;
+  bottom: 65px ;
 }
 
 .hidden {
@@ -158,12 +160,11 @@ p {
   align-content: center;
   padding-top: 100px;
 }
-
+/*ANIMATING TRANSITIONS https://www.w3schools.com/Css/css3_transitions.asp*/
 #runMouse {
   animation: change-rate 5s linear infinite;
   position: absolute;
   padding-top: 100px;
-
 }
 @keyframes change-rate {
   0% {
@@ -176,10 +177,19 @@ p {
     right: 100%;
   }
 }
+/*MEDIA QUERIES - https://css-tricks.com/snippets/css/media-queries-for-standard-devices/*/
 
-
-
-
+/*@media all
+  and (min-width: 375px) {
+#gameBoard1 {
+  max-height: 80%;
+  max-width: 80%;
+}
+.mice {
+max-height: 80%;
+max-width: 80%;
+}
+}*/
 
 
 
