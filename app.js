@@ -19,13 +19,13 @@ button.addEventListener('click', showInstructions);
 
 //CHANGING BOARDGAME BACKGROUND
 function airbnb1click() {
-gameBoard1.style.background = 'no-repeat center url(/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb1.jpg)';
+gameBoard1.style.background = 'no-repeat center url(assets/airbnb1.jpg)';
 card1.style.border = '4px solid #337885';
 }
 
 airbnb1.addEventListener('click', airbnb1click);
 function airbnb2click() {
-  gameBoard1.style.background = 'no-repeat center url(/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb2.jpg)';
+  gameBoard1.style.background = 'no-repeat center url(assets/airbnb2.jpg)';
   card2.style.border = '4px solid #337885';
 }
 airbnb2.addEventListener('click', airbnb2click);
