@@ -1,5 +1,5 @@
 
-// UNIVERSAL FUNCTIONS
+// INITIAL DECLARATIONS
 var airbnb1 = document.getElementById('card1');
 var airbnb2 = document.getElementById('card2');
 var button = document.getElementById('bookButton');
@@ -50,10 +50,10 @@ var mouse4 = document.getElementById('mouse4');
 function hideMouse4(){
   setInterval(function(){mouse4.classList.toggle("hidden")}, 2500)
 }
+
 var mouse5 = document.getElementById('mouse5');
 function hideMouse5(){
   setInterval(function(){mouse5.classList.toggle("hidden")}, 3500);
-
 }
 
 var mouse6 = document.getElementById('mouse6');

@@ -99,7 +99,6 @@ p {
 /*GAME BOARD CSS HERE*/
 
 #gameBoard1 {
-  background-image: url(/Users/samanthaschonefeld/wdi/unit01/projects/mouse-game/assets/airbnb1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   height: 800px;
@@ -182,6 +181,11 @@ p {
     right: 100%;
   }
 }
+
+
+
+
+
 /*MEDIA QUERIES - https://css-tricks.com/snippets/css/media-queries-for-standard-devices/*/
 
 @media all
