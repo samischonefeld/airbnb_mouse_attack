@@ -99,6 +99,7 @@ p {
 /*GAME BOARD CSS HERE*/
 
 #gameBoard1 {
+  background-image: url(assets/airbnb1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   height: 800px;
